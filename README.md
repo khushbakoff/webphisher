@@ -1,6 +1,4 @@
-<p align="center">
-  <img src=".github/misc/logo.png" alt="Webphisher Uzbekistan" width="120">
-</p>
+
 
 <h1 align="center">Webphisher Uzbekistan</h1>
 
