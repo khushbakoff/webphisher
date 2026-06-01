@@ -1,189 +1,227 @@
-<!-- Zphisher -->
+<p align="center">
+  <img src=".github/misc/logo.png" alt="Webphisher Uzbekistan" width="120">
+</p>
+
+<h1 align="center">Webphisher Uzbekistan</h1>
 
 <p align="center">
-  <img src=".github/misc/logo.png">
+  <strong>Ta'lim laboratoriyasi uchun zamonaviy web boshqaruv paneli</strong><br>
+  <sub>35+ phishing shabloni · 3 til · jonli monitoring · SQLite / JSON</sub>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-2.3.5-green?style=for-the-badge">
-  <img src="https://img.shields.io/github/license/htr-tech/zphisher?style=for-the-badge">
-  <img src="https://img.shields.io/github/stars/htr-tech/zphisher?style=for-the-badge">
-  <img src="https://img.shields.io/github/issues/htr-tech/zphisher?color=red&style=for-the-badge">
-  <img src="https://img.shields.io/github/forks/htr-tech/zphisher?color=teal&style=for-the-badge">
+  <a href="https://github.com/khushbakoff/webphisher/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-GPL--3.0-blue?style=for-the-badge" alt="GPL-3.0">
+  </a>
+  <a href="https://github.com/khushbakoff/webphisher">
+    <img src="https://img.shields.io/badge/Panel-v1.0.0-8b5cf6?style=for-the-badge" alt="Panel version">
+  </a>
+  <a href="https://github.com/khushbakoff/webphisher">
+    <img src="https://img.shields.io/badge/Core-v2.3.5-06b6d4?style=for-the-badge" alt="Core version">
+  </a>
+  <img src="https://img.shields.io/badge/Languages-UZ%20%7C%20RU%20%7C%20EN-ec4899?style=for-the-badge" alt="Languages">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Author-htr--tech-blue?style=flat-square">
-  <img src="https://img.shields.io/badge/Open%20Source-Yes-darkgreen?style=flat-square">
-  <img src="https://img.shields.io/badge/Maintained%3F-Yes-lightblue?style=flat-square">
-  <img src="https://img.shields.io/badge/Written%20In-Bash-darkcyan?style=flat-square">
-  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhtr-tech%2Fzphisher&title=Visitors&edge_flat=false"/></a>
+  <img src="https://img.shields.io/badge/PHP-8.0+-777bb4?style=flat-square&logo=php&logoColor=white">
+  <img src="https://img.shields.io/badge/SQLite-optional-003B57?style=flat-square&logo=sqlite&logoColor=white">
+  <img src="https://img.shields.io/badge/Windows-✓-0078d4?style=flat-square&logo=windows">
+  <img src="https://img.shields.io/badge/Linux-✓-FCC624?style=flat-square&logo=linux&logoColor=black">
 </p>
 
-<p align="center"><b>A beginners friendly, Automated phishing tool with 30+ templates.</b></p>
+---
 
-##
+## 📖 Loyiha haqida
 
-<h3><p align="center">Disclaimer</p></h3>
+**Webphisher Uzbekistan** — [Zphisher](https://github.com/htr-tech/zphisher) asosidagi phishing laboratoriya vositalarini **brauzer orqali** boshqarish uchun yaratilgan web-panel.
 
-<i>Any actions and or activities related to <b>Zphisher</b> is solely your responsibility. The misuse of this toolkit can result in <b>criminal charges</b> brought against the persons in question. <b>The contributors will not be held responsible</b> in the event any criminal charges be brought against any individuals misusing this toolkit to break the law.
+Terminal buyruqlarini eslab qolish shart emas: shablon tanlaysiz, tunnel sozlaysiz, havolani olasiz va natijalarni real vaqtda kuzatasiz.
 
-<b>This toolkit contains materials that can be potentially damaging or dangerous for social media</b>. Refer to the laws in your province/country before accessing, using,or in any other way utilizing this in a wrong way.
+| Rejim | Port | Vazifasi |
+|-------|------|----------|
+| **Web panel** | `9090` | Boshqaruv, monitoring, ma'lumotlar bazasi |
+| **Lab server** | `8080` | Tanlangan phishing shabloni (PHP built-in) |
 
-<b>This Tool is made for educational purposes only</b>. Do not attempt to violate the law with anything contained here. <b>If this is your intention, then Get the hell out of here</b>!
+---
 
-It only demonstrates "how phishing works". <b>You shall not misuse the information to gain unauthorized access to someones social media</b>. However you may try out this at your own risk.</i>
+## ✨ Asosiy imkoniyatlar
 
-##
+### Web panel (`panel/`)
 
-### Features
+- 🎨 **Zamonaviy UI** — yorqin dizayn, o‘ng panel (sessiya, statistika, so‘nggi yozuvlar)
+- 🌍 **3 til** — O‘zbek, Rus, Ingliz (`UZ` / `RU` / `EN`)
+- 📋 **35+ platforma** — Facebook, Instagram, Google, Telegram ijtimoiy tarmoqlari va boshqalar
+- 🔗 **Tunnel** — Localhost, Cloudflared, LocalXpose
+- 🎭 **Mask URL** va **URL qisqartirish** (is.gd, shrtco, tinyurl)
+- 📡 **Jonli monitoring** — IP va login ma’lumotlari darhol
+- 💾 **Ma’lumotlar bazasi** — SQLite yoki JSON (`panel/data/`)
+- ☁️ **Cloudflared** — Windows uchun PowerShell skripti (`panel/install-cloudflared.bat`)
 
-- Latest and updated login pages.
-- Beginners friendly
-- Multiple tunneling options
-  - Localhost
-  - Cloudflared
-  - LocalXpose
-- Mask URL support 
-- Docker support
+### Terminal (ixtiyoriy)
 
-##
+Asl `zphisher.sh` skripti ham saqlanib qolgan — klassik CLI rejimida ishlatish mumkin.
 
-### Installation
+---
 
-- Just, Clone this repository -
-  ```
-  git clone --depth=1 https://github.com/htr-tech/zphisher.git
-  ```
+## ⚠️ Ogohlantirish (muhim)
 
-- Now go to cloned directory and run `zphisher.sh` -
-  ```
-  $ cd zphisher
-  $ bash zphisher.sh
-  ```
+> **Faqat qonuniy ta’lim va ruxsat etilgan laboratoriya muhitida foydalaning.**
 
-- On first launch, It'll install the dependencies and that's it. ***Zphisher*** is installed.
+- Ushbu loyiha phishing **qanday ishlashini o‘rgatish** uchun mo‘ljallangan.
+- Noqonuniy foydalanish **jinoyat javobgarligiga** olib kelishi mumkin.
+- Muallif va contributorlar noto‘g‘ri foydalanish uchun **javobgar emas**.
+- Hech qachon haqiqiy foydalanuvchilarga ruxsatsiz hujum qilmang.
 
-##
+---
 
-### Installation (Termux)
-You can easily install zphisher in Termux by using tur-repo
+## 🚀 Tezkor boshlash
+
+### 1. Repozitoriyni klonlash
+
+```bash
+git clone https://github.com/khushbakoff/webphisher.git
+cd webphisher
 ```
-$ pkg install tur-repo
-$ pkg install zphisher
-$ zphisher
+
+### 2. Talablar
+
+| Dastur | Versiya | Izoh |
+|--------|---------|------|
+| **PHP** | 8.0+ | `curl` tavsiya etiladi |
+| **pdo_sqlite** | ixtiyoriy | Yo‘q bo‘lsa JSON rejimi ishlaydi |
+| **Git / Internet** | — | Cloudflared yuklab olish uchun |
+
+PHP holatini tekshirish:
+
+```bash
+php panel/check-php.php
 ```
-### A Note : 
-***Termux discourages hacking*** .. So never discuss anything related to *zphisher* in any of the termux discussion groups. For more check : [wiki](https://wiki.termux.com/wiki/Hacking)
 
-##
+### 3. Web panelni ishga tushirish
 
-<p align="left">
-  <a href="https://shell.cloud.google.com/cloudshell/open?cloudshell_git_repo=https://github.com/htr-tech/zphisher.git&tutorial=README.md" target="_blank"><img src="https://gstatic.com/cloudssh/images/open-btn.svg"></a>
-</p>
+**Windows:**
 
-##
+```bat
+panel\start-panel.bat
+```
 
-### Installation via ".deb" file
+**Linux / macOS:**
 
-- Download `.deb` files from the [**Latest Release**](https://github.com/htr-tech/zphisher/releases/latest)
-- If you are using ***termux*** then download the `*_termux.deb`
+```bash
+chmod +x panel/start-panel.sh
+./panel/start-panel.sh
+```
 
-- Install the `.deb` file by executing
-  ```
-  apt install <your path to deb file>
-  ```
-  Or
-  ```
-  $ dpkg -i <your path to deb file>
-  $ apt install -f
-  ```
+Brauzerda oching: **http://127.0.0.1:9090**
 
-##
+### 4. Birinchi sessiya
 
-### Run on Docker
+1. **Shablonlar** bo‘limidan platforma tanlang (masalan, Google, Instagram).
+2. **Tunnel** tanlang: avval **Localhost** bilan sinab ko‘ring.
+3. **Ishga tushirish** tugmasini bosing.
+4. **Jonli monitoring**da IP va login yozuvlarini kuzating.
 
-- Docker Image Mirror:
-  - **DockerHub** : 
-    ```
-    docker pull htrtech/zphisher
-    ```
-  - **GHCR** : 
-    ```
-    docker pull ghcr.io/htr-tech/zphisher:latest
-    ```
+---
 
-- By using the wrapper script [**run-docker.sh**](https://raw.githubusercontent.com/htr-tech/zphisher/master/run-docker.sh)
+## 🖥️ Windows uchun qo‘shimcha
 
-  ```
-  $ curl -LO https://raw.githubusercontent.com/htr-tech/zphisher/master/run-docker.sh
-  $ bash run-docker.sh
-  ```
-- Temporary Container
+| Muammo | Yechim |
+|--------|--------|
+| `curl_init()` xatosi | `panel\setup-php.bat` yoki `php.ini` da `extension=curl` |
+| `pdo_sqlite` yo‘q | Panel avtomatik **JSON** rejimida ishlaydi |
+| Cloudflared yuklanmaydi | `panel\install-cloudflared.bat` (PHP kerak emas) |
 
-  ```
-  docker run --rm -ti htrtech/zphisher
-  ```
-  - Remember to mount the `auth` directory.
+---
 
-##
+## 📁 Loyiha tuzilmasi
 
-<details>
-  <summary><h3>Dependencies</h3></summary>
+```
+webphisher/
+├── panel/                    # Webphisher Uzbekistan panel
+│   ├── views/app.php         # Asosiy interfeys
+│   ├── api/router.php        # REST API
+│   ├── lib/                  # PHP backend (Store, Session, Tunnel...)
+│   ├── assets/               # CSS, JS, i18n (uz, ru, en)
+│   ├── data/                 # SQLite / JSON (gitignore)
+│   ├── start-panel.bat       # Windows launcher
+│   └── start-panel.sh        # Linux launcher
+├── .sites/                   # 35+ phishing shablonlari
+├── zphisher.sh               # Asl terminal skripti (ixtiyoriy)
+├── auth/                     # Yig‘ilgan ma’lumotlar (gitignore)
+└── .server/                  # Runtime, cloudflared (gitignore)
+```
 
-<b>Zphisher</b> requires following programs to run properly - 
-- `git`
-- `curl`
-- `php`
+---
 
-> All the dependencies will be installed automatically when you run **Zphisher** for the first time.
-</details>
+## 🌐 Tillar
 
-<details>
-  <summary><h3>Tested on</h3></summary>
+Panel interfeysi 3 tilda:
 
-- **Ubuntu**
-- **Debian**
-- **Arch**
-- **Manjaro**
-- **Fedora**
-- **Termux**
-</details>
+| Til | Kod | Fayl |
+|-----|-----|------|
+| O‘zbek | `UZ` | `panel/assets/i18n/uz.json` |
+| Русский | `RU` | `panel/assets/i18n/ru.json` |
+| English | `EN` | `panel/assets/i18n/en.json` |
 
-##
+Til chap menyudan tanlanadi va brauzerda saqlanadi.
 
-<h3 align="center"><i>:: Workflow ::</i></h3>
+---
+
+## 🔧 Terminal rejimi (Zphisher CLI)
+
+Klassik terminal versiyasi ham mavjud:
+
+```bash
+bash zphisher.sh
+```
+
+Birinchi ishga tushirishda `php`, `curl`, `cloudflared` avtomatik o‘rnatiladi (Linux).
+
+---
+
+## 🐳 Docker (asl Zphisher)
+
+```bash
+docker pull htrtech/zphisher
+docker run --rm -ti htrtech/zphisher
+```
+
+Web panel uchun Docker hali alohida image emas — mahalliy PHP server tavsiya etiladi.
+
+---
+
+## 🔒 Xavfsizlik
+
+Quyidagilar **hech qachon** GitHubga yuklanmaydi (`.gitignore`):
+
+- `auth/` — yig‘ilgan credential va IP fayllari
+- `.server/` — cloudflared, vaqtinchalik www
+- `panel/data/panel.db` va `store.json`
+
+---
+
+## 📜 Litsenziya
+
+Ushbu loyiha **[GNU General Public License v3.0](LICENSE)** (GPL-3.0) ostida tarqatiladi.
+
+Asl Zphisher loyihasi: [htr-tech/zphisher](https://github.com/htr-tech/zphisher) — muallif **TAHMID RAYAT (HTR-TECH)**.
+
+Web panel qatlami: **Webphisher Uzbekistan** — [khushbakoff](https://github.com/khushbakoff).
+
+GPL shartlariga ko‘ra o‘zgartirilgan kodni ham GPL ostida ulashish kerak.
+
+---
+
+## 🙏 Minnatdorchilik
+
+| Ishtirokchi | Hissa |
+|------------|-------|
+| [htr-tech / Zphisher](https://github.com/htr-tech/zphisher) | Asosiy engine va shablonlar |
+| [khushbakoff](https://github.com/khushbakoff) | Web panel, UI, i18n, SQLite |
+
+---
+
 <p align="center">
-<img src=".github/misc/workflow.gif"/>
+  <sub>⭐ Agar loyiha foydali bo‘lsa, repoga star qo‘ying</sub><br><br>
+  <a href="https://github.com/khushbakoff/webphisher">github.com/khushbakoff/webphisher</a>
 </p>
-
-##
-
-### Find Me on:
-<p align="left">
-  <a href="https://tahmidrayat.is-a.dev" target="_blank"><img src="https://img.shields.io/badge/Socials-grey?style=for-the-badge&logo=linktree"></a>
-  <a href="https://github.com/htr-tech" target="_blank"><img src="https://img.shields.io/badge/Github-blue?style=for-the-badge&logo=github"></a>
-</p>
-
-
-### *Thanks to all contributors*:
-
-<table>
-  <tr align="center">
-    <td><a href="https://github.com/1RaY-1"><img src="https://avatars.githubusercontent.com/u/78962948?s=100" /><br /><sub><b>1RaY-1</b></sub></a></td>
-    <td><a href="https://github.com/adi1090x"><img src="https://avatars.githubusercontent.com/u/26059688?s=100" /><br /><sub><b>Aditya Shakya</b></sub></a></td>
-    <td><a href="https://github.com/AliMilani"><img src="https://avatars.githubusercontent.com/u/59066012?s=100" /><br /><sub><b>Ali Milani</b></sub></a></td>
-    <td><a href="https://github.com/Meht-evaS"><img src="https://avatars.githubusercontent.com/u/57435273?s=100" /><br /><sub><b>AmnesiA</b></sub></a></td>
-    <td><a href="https://github.com/KasRoudra"><img src="https://avatars.githubusercontent.com/u/78908440?s=100" /><br /><sub><b>KasRoudra</b></sub></a></td>
-   <td><a href="https://github.com/MoisesTapia"><img src="https://avatars.githubusercontent.com/u/28166400?s=100" /><br /><sub><b>Moises Tapia</b></sub></a></td>
-  </tr>
-  <tr align="center">
-   <td><a href="https://github.com/E343IO"><img src="https://avatars.githubusercontent.com/u/74646789?s=100" /><br /><sub><b>Mr.Derek</b></sub></a></td>
-    <td><a href="https://github.com/BDhackers009"><img src="https://avatars.githubusercontent.com/u/67186139?s=100" /><br /><sub><b>Mustakim Ahmed</b></sub></a></td>
-    <td><a href="https://github.com/sepp0"><img src="https://avatars.githubusercontent.com/u/36642137?s=100" /><br /><sub><b>sepp0</b></sub></a></td>
-    <td><a href="https://github.com/TripleHat"><img src="https://avatars.githubusercontent.com/u/68332137?s=100" /><br /><sub><b>TripleHat</b></sub></a></td>
-    <td><a href="https://github.com/Yisus7u7"><img src="https://avatars.githubusercontent.com/u/64093255?s=100" /><br /><sub><b>Yisus7u7</b></sub></a></td>
-  </tr>
-<table>
-
-<!-- // -->
